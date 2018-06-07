@@ -11,10 +11,10 @@ var config = {
         500,
         1000,
         randomScalingFactor(),
-        0,
-        0,
-        0,
-        0
+        randomScalingFactor(),
+        randomScalingFactor(),
+        randomScalingFactor(),
+        randomScalingFactor()
       ],
       fill: false,
     }]
