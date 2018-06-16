@@ -1,0 +1,35 @@
+/**************************/
+/*         IMAGES         */
+/**************************/
+.userInfo{
+  width: 100%;
+  border-bottom: 1px solid #d7d7d7;
+  @include brk-pt{
+    width:45%;
+  }
+  li{
+    border-bottom: 1px solid #d7d7d7;
+    @include display(flex, 0 1 45%, row wrap, space-around);
+    padding: 15px 0px;
+  }
+  li:last-of-type{
+    border-bottom: none;
+  }
+}
+
+.noteBanner{
+  width: 90%;
+  background-color: #7477bf;
+  color: white;
+  margin: 30px auto;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  span{
+    position:absolute;
+    color:#c9c9c9;
+    font-size: 2rem;
+    top:0px;
+    right:10px;
+  }
+}

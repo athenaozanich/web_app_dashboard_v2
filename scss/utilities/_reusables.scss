@@ -1,0 +1,75 @@
+/**************************/
+/*        Reusables       */
+/**************************/
+.flex{
+  display:block;
+  @include brk-pt{
+    @include display(flex, 1, row wrap, space-around);
+  }
+}
+.searchbox{
+  width:100%;
+  input{
+    width:90%;
+  }
+  @include brk-pt{
+    width: 70%;
+    position: absolute;
+    right: 0px;
+    top: 96px;
+    border: 1px solid #d7d7d7;
+    background-color: #f8f8f8;
+  }
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 34px;
+  margin-left: 20%;
+  input {
+    z-index: 100;
+    display:none;
+  }
+
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(116,119,191);
+}
+
+input:checked + .slider {
+  background-color: rgb(116,119,191);
+}
+
+input:checked + .slider::before {
+    transform: translateX(46px);
+}

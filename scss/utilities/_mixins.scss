@@ -1,0 +1,21 @@
+/**************************/
+/*         Mixins         */
+/**************************/
+@mixin brk-pt{
+    @media only screen and (min-width: 768px) {
+    	@content;
+    }
+}
+@mixin display($display, $flex:null, $flxFlw:null, $jstfyCnt:null){
+  display: $display;
+  flex:$flex;
+  flex-flow: $flxFlw;
+  justify-content: $jstfyCnt;
+  @content;
+}
+
+@mixin element($element) {
+  &__#{$element} {
+  	@content;
+  }
+}

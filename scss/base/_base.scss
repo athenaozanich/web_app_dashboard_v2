@@ -1,0 +1,35 @@
+ul{
+	padding:0;
+	margin: 0px;
+	section, p{
+		margin:auto;
+		text-align:center;
+	}
+}
+body{
+	@include display(flex, null, row wrap, space-around);
+}
+
+main{
+	width: 95%;
+	margin: auto;
+	background-color:white;
+	@include brk-pt{
+    width:90%;
+  }
+}
+
+img{
+  width:65px;
+  height:65px;
+  border-radius: 50%;
+}
+
+article{
+	@include display(flex, 0 1 30%, row wrap, space-around);
+	margin-top: 15px;
+	border: 1px solid #d7d7d7;
+	border-radius: 5px;
+	background-color: #f3f3f3;
+	padding:10px;
+}

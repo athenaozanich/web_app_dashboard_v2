@@ -1,0 +1,104 @@
+/**************************/
+/*       NAVIGATION       */
+/**************************/
+header{
+  flex-basis: 100vw;
+  background-color: rgb(116,119,191);
+  padding: 10px 0px;
+  ul{
+    @include display(flex, null, null, space-around);
+  }
+  li:first-of-type{
+    flex-grow:2;
+  }
+  li:last-of-type{
+    border-left:1px solid #d7d7d7;
+  }
+  img{
+    float:left;
+    width:50px;
+    height:50px;
+    margin:10px;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+    p{
+      float: right;
+      margin:20px;
+      display:none;
+      @include brk-pt{
+        display: block;
+      }
+    }
+  }
+  h4{
+    display:none;
+    @include brk-pt{
+      display:inline;
+
+    }
+  }
+}
+
+#alertNote{
+  width: 11px;
+  height: 5px;
+  background-color: lime;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  top: 24px;
+  right: 94px;
+  @include brk-pt{
+    right: 291px;
+  }
+}
+
+#lineChart__nav{
+  float: right;
+  margin:14px;
+}
+
+li{
+  list-style: none;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: .8rem;
+}
+
+.nav__main{
+  @include display(flex, 1, row wrap, space-around);
+  background-color:rgb(77,76,114);
+  a{
+    height: 40px;
+    margin-top: 10px;
+    svg path{
+      fill:#b8b8b8;
+    }
+  }
+  svg{
+    width: 35px;
+    height: 100%;
+    margin-left: 10px;
+    @include brk-pt{
+      margin-left: 27px;
+    }
+  }
+
+  @include brk-pt{
+    @include display(flex, 0 1 75px, column, flex-start);
+  }
+
+}
+
+#current{
+  border-bottom: 2px solid lightgreen;
+  svg path{
+    fill:white;
+  }
+  @include brk-pt{
+    border-bottom: none;
+    border-right: 2px solid lightgreen;
+  }
+}

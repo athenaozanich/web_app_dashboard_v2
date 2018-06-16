@@ -1,0 +1,19 @@
+/**************************/
+/*         Charts         */
+/**************************/
+.lineGraph{
+  @include element(container){
+    width:99%;
+  }
+
+}
+.barGraph, .doughnutGraph{
+
+  @include element(container){
+
+    @include brk-pt{
+      width:45%;
+    }
+
+  }
+}
