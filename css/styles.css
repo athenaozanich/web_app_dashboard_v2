@@ -620,7 +620,7 @@ header {
 /**************************/
 header {
   flex-basis: 100vw;
-  background-color: #7477bf;
+  background-color: orange;
   padding: 10px 0px; }
   header > ul {
     display: flex;
