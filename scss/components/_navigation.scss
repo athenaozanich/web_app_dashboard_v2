@@ -5,15 +5,55 @@ header{
   flex-basis: 100vw;
   background-color: rgb(116,119,191);
   padding: 10px 0px;
-  ul{
+  > ul{
     @include display(flex, null, null, space-around);
+    ul{
+      display: none;
+      position: absolute;
+      z-index: 100;
+      top:70px;
+      right:73px;
+      margin: 0px;
+      background-color:rgb(77,76,114);
+      border: 2px solid rgb(77,76,114);
+      border-radius: 5px;
+      @include brk-pt{
+        right:270px;
+      }
+    }
+    ul::after{
+      position: absolute;
+      top: -10px;
+      right: 12px;
+      width: 0;
+      height: 0;
+      border-bottom: 10px solid #4d4c72;
+      border-left: 13px solid transparent;
+      border-right: 13px solid transparent;
+      content: "";
+    }
+    li:first-of-type{
+      flex-grow:2;
+    }
+    > li:last-of-type{
+      border-left:1px solid #d7d7d7;
+    }
   }
-  li:first-of-type{
-    flex-grow:2;
+  #notes{
+    li{
+    display: block;
+    padding: 5px;
+    margin: 0px;
+    border-radius: 5px;
+    border: 2px solid #4d4c72;
+
+    }
+    & li:hover{
+      background-color: limegreen;
+    }
+
   }
-  li:last-of-type{
-    border-left:1px solid #d7d7d7;
-  }
+
   img{
     float:left;
     width:50px;
@@ -26,6 +66,8 @@ header{
     p{
       float: right;
       margin:20px;
+      width: 157px;
+      font-size: 1.5rem;
       display:none;
       @include brk-pt{
         display: block;
@@ -40,11 +82,14 @@ header{
     }
   }
 }
-
+.show{
+  display:block;
+}
 #alertNote{
   width: 11px;
   height: 5px;
   background-color: lime;
+  border:1px solid #d7d7d7;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   position: absolute;
@@ -58,6 +103,13 @@ header{
 #lineChart__nav{
   float: right;
   margin:14px;
+  .currentChart{
+    background-color: limegreen;
+    color: white;
+    padding:2px;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+  }
 }
 
 li{

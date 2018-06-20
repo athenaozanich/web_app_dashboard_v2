@@ -1,15 +1,18 @@
 ul{
 	padding:0;
 	margin: 0px;
-	section, p{
-		margin:auto;
-		text-align:center;
+	section{
+		display: inline-block;
 	}
 }
 body{
 	@include display(flex, null, row wrap, space-around);
-}
 
+}
+a{
+	color: white;
+	text-decoration: none;
+}
 main{
 	width: 95%;
 	margin: auto;
@@ -17,6 +20,14 @@ main{
 	@include brk-pt{
     width:90%;
   }
+	> section:first-of-type{
+		border-bottom:1px solid #d7d7d7;
+		@include brk-pt{
+			& > aside:first-child, > form:first-child{
+				border-right:1px solid #d7d7d7;
+			}
+		}
+	}
 }
 
 img{
@@ -32,4 +43,39 @@ article{
 	border-radius: 5px;
 	background-color: #f3f3f3;
 	padding:10px;
+	min-width: 175px;
+}
+
+fieldset{
+   border:none;
+}
+
+form{
+   width:90%;
+   margin: auto;
+   @include brk-pt{
+     width:49%;
+   }
+}
+
+button{
+  width: 100%;
+  margin: 10px auto;
+  height:30px;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+  background-color:rgb(77,76,114);
+  color: white;
+}
+
+input{
+  width: 100%;
+  height:30px;
+  display:block;
+  margin: 10px auto;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+}
+ .flex aside, form{
+  border-bottom: 1px solid #d7d7d7;
 }

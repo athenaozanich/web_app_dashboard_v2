@@ -8,7 +8,6 @@
     <title>Web App Dashboard</title>
     <script src="js/Chart.bundle.min.js"></script>
   	<script src="js/utils.js"></script>
-    <script src="js/web_app_charts/main.js"></script>
     <link rel="stylesheet" href="css/styles.css">
   </head>
 
@@ -17,20 +16,37 @@
     <header>
       <ul>
         <li>
-          <h1>Your</h1>App™
+          <h1>OLYMPUS</h1>Connect™
         </li>
 
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="35px" height="100%">
+        <li onclick="document.getElementById('notes').classList.toggle('show');" >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="35px" height="100%" onclick="document.getElementById('alertNote').style.display='none';">
             <path d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4 1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z" fill="#fff"/>
           </svg>
           <span id="alertNote"></span>
+          <ul id="notes">
+            <li>
+              <p>Hermes commented on the welcome page "This will make my job easier, thanks sis!"</p>
+              <i>
+                1hr ago
+              </i>
+            </li>
+
+            <li>
+              <p>
+                Zeus messaged you "Athena!! Unsuspend your brother's account lol."
+              </p>
+              <i>
+                1hr ago
+              </i>
+            </li>
+          </ul>
         </li>
 
         <li>
           <a href="index.html">
-            <img src="profileImgs/3.jpg" alt="">
-            <p>Gary Thompson</p>
+            <img src="https://img00.deviantart.net/9a21/i/2017/297/e/1/athena_by_janiceduke-d69bmrk.jpg" alt="Athena">
+            <p>Athena</p>
           </a>
         </li>
       </ul>
@@ -67,36 +83,38 @@
       <h2>Dashboard</h2>
 
       <div class="searchbox">
-        <input type="text" placeholder="Search..">
+        <input id="search" type="text" placeholder="Search..">
       </div>
 
       <div class="noteBanner">
-        <h4>ALERT</h4><span>×</span>
+        <h4>ALERT</h4><a onclick="this.parentElement.style.display='none';">&times;</a>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
 
       <section class="flex">
-
         <div class="lineGraph__container">
-            <h3>Traffic</h3>
-            <ul id="lineChart__nav">
-              <li>Yearly</li>
-              <li>Monthly</li>
-              <li>Weekly</li>
-              <li>Daily</li>
-            </ul>
-        		<canvas id="lineChart"></canvas>
-        	</div>
+          <h3>Traffic</h3>
+          <ul id="lineChart__nav">
+            <li>Hourly</li>
+            <li>Monthly</li>
+            <li>Weekly</li>
+            <li>Daily</li>
+          </ul>
+          <canvas id="lineChart"></canvas>
+        </div>
+      </section>
 
-        <div class="barGraph__container">
+      <section class="flex">
+
+        <aside class="barGraph__container">
           <h3>Daily traffic</h3>
       		<canvas id="barGraph"></canvas>
-      	</div>
+      	</aside>
 
-        <div class="doughnutGraph__container">
+        <aside class="doughnutGraph__container">
           <h3>Mobile Users</h3>
       		<canvas id="doughnut"></canvas>
-      	</div>
+      	</aside>
 
       </section>
 
@@ -133,43 +151,44 @@
       </section>
 
       <section class="flex">
+
         <aside class="userInfo">
           <h3>New Members</h3>
           <ul>
             <li>
-              <img src="profileImgs/3.jpg" alt="">
+              <img src="https://orig00.deviantart.net/1245/f/2007/077/a/1/zeus_by_varges.jpg" alt="Zeus">
               <section>
-                <h3>Gary Thompson</h3>
-                <h4><span>gary.thompson@gmail.com</span></h4>
+                <h3>Zeus</h3>
+                <h4><span>papa.zeus@olympus.com</span></h4>
               </section>
-              <p>3/23/2017</p>
+              <p>1/1/2018</p>
             </li>
 
             <li>
-              <img src="profileImgs/93.jpg" alt="">
+              <img src="https://orig00.deviantart.net/7841/f/2015/182/c/c/aphrodite_by_alanvadell-d8zkcv5.jpg" alt="Aphrodite">
               <section>
-                <h3>Gary Thompson</h3>
-                <h4><span>gary.thompson@gmail.com</span></h4>
+                <h3>Aphrodite</h3>
+                <h4><span>aphrodite.lvr.nt.ftr@olympus.com</span></h4>
               </section>
-              <p>3/23/2017</p>
+              <p>1/7/2018</p>
             </li>
 
             <li>
-              <img src="profileImgs/15.jpg" alt="">
+              <img src="https://pre00.deviantart.net/db1a/th/pre/f/2012/183/4/d/persephone_by_cgaddictworld-d55no9p.jpg" alt="Persephone">
               <section>
-                <h3>Gary Thompson</h3>
-                <h4><span>gary.thompson@gmail.com</span></h4>
+                <h3>Persephone</h3>
+                <h4><span>Persephone@olympus.com</span></h4>
               </section>
-              <p>3/23/2017</p>
+              <p>1/23/2018</p>
             </li>
 
             <li>
-              <img src="profileImgs/57.jpg" alt="">
+              <img src="https://img00.deviantart.net/df4b/i/2009/159/a/0/apollo_by_valerhon.jpg" alt="Apollo">
               <section>
-                <h3>Gary Thompson</h3>
-                <h4><span>gary.thompson@gmail.com</span></h4>
+                <h3>Apollo</h3>
+                <h4><span>apollo.prdgl.sun@olympus.com</span></h4>
               </section>
-              <p>3/23/2017</p>
+              <p>2/10/2018</p>
             </li>
           </ul>
         </aside>
@@ -178,42 +197,43 @@
           <h3>Recent Activity</h3>
           <ul id="userActivity">
             <li>
-              <img src="profileImgs/17.jpg" alt="">
+              <img src="https://img00.deviantart.net/161d/i/2017/297/a/0/artemis_by_janiceduke-d5j0i0g.jpg" alt="Artemis">
               <section>
-                <h3>Gary Thompson</h3>
-                <h4><span>gary.thompson@gmail.com</span></h4>
+                <h3>Artemis liked the welcome post</h3>
+                <h4><span>4hrs ago</span></h4>
+              </section>
+              <p>&gt;</p>
+            </li>
+
+            <li>
+              <img src="https://orig00.deviantart.net/6e96/f/2008/181/7/3/hercules_by_radicalpublishing.jpg" alt="Hercules">
+              <section>
+                <h3>Hercules replied to your comment</h3>
+                <h4><span>2hr 13mins ago</span></h4>
               </section>
               <p>></p>
             </li>
 
             <li>
-              <img src="profileImgs/33.jpg" alt="">
+              <img src="https://orig00.deviantart.net/8194/f/2015/244/f/7/hermes_by_alanvadell-d98161p.jpg" alt="Hermes">
               <section>
-                <h3>Gary Thompson</h3>
-                <h4><span>gary.thompson@gmail.com</span></h4>
+                <h3>Hermes shared your project</h3>
+                <h4><span>45mins ago</span></h4>
               </section>
               <p>></p>
             </li>
 
             <li>
-              <img src="profileImgs/19.jpg" alt="">
+              <img src="https://pre00.deviantart.net/2da3/th/pre/i/2013/018/f/a/ares_by_peterprime-d5rvzcq.png" alt="Ares">
               <section>
-                <h3>Gary Thompson</h3>
-                <h4><span>gary.thompson@gmail.com</span></h4>
-              </section>
-              <p>></p>
-            </li>
-
-            <li>
-              <img src="profileImgs/21.jpg" alt="">
-              <section>
-                <h3>Gary Thompson</h3>
-                <h4><span>gary.thompson@gmail.com</span></h4>
+                <h3>Ares' account: suspended for EULA violations</h3>
+                <h4><span>1min ago</span></h4>
               </section>
               <p>></p>
             </li>
           </ul>
         </aside>
+
       </section>
 
       <section class="flex">
@@ -230,20 +250,16 @@
           <fieldset>
             <legend>User Settings</legend>
             <div class="flex">
-              <div>
                 <h4>Email Notifications</h4>
                 <label class="toggle" for="email_notes">
                   <input id="email_notes" type="checkbox" name="email_notes" value="">
                   <span class="slider"></span>
                 </label>
-              </div>
-              <div>
                 <h4>Profile Visibility</h4>
                 <label class="toggle" for="prof_visibilty">
                   <input id="prof_visibilty" type="checkbox" name="prof_visibilty" value="">
                   <span class="slider"></span>
                 </label>
-              </div>
             </div>
             <select class="" name="">
               <option value=""></option>
@@ -261,5 +277,6 @@
 
     </main>
 
+    <script src="js/web_app_charts/main.js"></script>
   </body>
 </html>

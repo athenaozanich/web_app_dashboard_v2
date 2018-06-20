@@ -1,44 +1,11 @@
-fieldset{
-   border:none;
-}
-
-form{
-   width:90%;
-   margin: auto;
-   @include brk-pt{
-     width:45%;
-   }
-}
-
-button{
-  width: 100%;
-  margin: 10px auto;
-  height:30px;
-  border: 1px solid #d7d7d7;
-  border-radius: 5px;
-  background-color:rgb(77,76,114);
-  color: white;
-}
-
-input{
-  width: 100%;
-  height:30px;
-  display:block;
-  margin: 10px auto;
-  border: 1px solid #d7d7d7;
-  border-radius: 5px;
-}
-
 .user__form{
 
   h4{
-    text-align: center;
-    margin:15px 5px;
-  }
-  .flex{
-    div{
-      display:block;
-      width:100%
+    text-align: left;
+    margin:15px 0px;
+    width:52%;
+    @include brk-pt{
+      margin:25px 0px;
     }
   }
   textarea, input, select{
@@ -47,6 +14,9 @@ input{
     margin: 10px auto;
     border: 1px solid #d7d7d7;
     border-radius: 5px;
+  }
+  select{
+    margin-top: 55px;
   }
   @include brk-pt{
       #save{

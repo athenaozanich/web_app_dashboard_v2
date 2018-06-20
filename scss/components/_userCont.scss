@@ -3,14 +3,18 @@
 /**************************/
 .userInfo{
   width: 100%;
-  border-bottom: 1px solid #d7d7d7;
   @include brk-pt{
-    width:45%;
+    width:49%;
   }
   li{
     border-bottom: 1px solid #d7d7d7;
-    @include display(flex, 0 1 45%, row wrap, space-around);
+    //@include display(flex, 0 1 45%, row wrap, space-around);
     padding: 15px 0px;
+    width: 95%;
+    p{
+      float:right;
+      margin-top:40px;
+    }
   }
   li:last-of-type{
     border-bottom: none;
@@ -25,7 +29,7 @@
   border-radius: 10px;
   padding: 10px;
   position: relative;
-  span{
+  a{
     position:absolute;
     color:#c9c9c9;
     font-size: 2rem;

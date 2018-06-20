@@ -8,13 +8,10 @@
 /*        Reusables       */
 /**************************/
 .flex {
-  display: block; }
-  @media only screen and (min-width: 768px) {
-    .flex {
-      display: flex;
-      flex: 1;
-      flex-flow: row wrap;
-      justify-content: space-around; } }
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  justify-content: space-around; }
 
 .searchbox {
   width: 100%; }
@@ -25,16 +22,15 @@
       width: 70%;
       position: absolute;
       right: 0px;
-      top: 96px;
+      top: 90px;
       border: 1px solid #d7d7d7;
       background-color: #f8f8f8; } }
 
 .toggle {
   position: relative;
   display: inline-block;
-  width: 80px;
-  height: 34px;
-  margin-left: 20%; }
+  width: 100px;
+  height: 35px; }
   .toggle input {
     z-index: 100;
     display: none; }
@@ -42,10 +38,10 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
+  top: 10px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -10px;
   background-color: #ccc;
   border-radius: 34px;
   -webkit-transition: .4s;
@@ -53,15 +49,15 @@
 
 .slider::before {
   position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
+  content: "ON";
+  height: 17px;
+  width: 28px;
+  padding: 6px;
   left: 4px;
-  bottom: 4px;
+  bottom: 3px;
   background-color: white;
-  border-radius: 50%;
-  -webkit-transition: .4s;
-  transition: .4s; }
+  border-radius: 20px;
+  transition: 1s; }
 
 input:focus + .slider {
   box-shadow: 0 0 1px #7477bf; }
@@ -70,7 +66,8 @@ input:checked + .slider {
   background-color: #7477bf; }
 
 input:checked + .slider::before {
-  transform: translateX(46px); }
+  transform: translateX(53px);
+  content: "OFF"; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -466,14 +463,17 @@ template {
 ul {
   padding: 0;
   margin: 0px; }
-  ul section, ul p {
-    margin: auto;
-    text-align: center; }
+  ul section {
+    display: inline-block; }
 
 body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around; }
+
+a {
+  color: white;
+  text-decoration: none; }
 
 main {
   width: 95%;
@@ -482,6 +482,11 @@ main {
   @media only screen and (min-width: 768px) {
     main {
       width: 90%; } }
+  main > section:first-of-type {
+    border-bottom: 1px solid #d7d7d7; }
+    @media only screen and (min-width: 768px) {
+      main > section:first-of-type > aside:first-child, main > section:first-of-type > form:first-child {
+        border-right: 1px solid #d7d7d7; } }
 
 img {
   width: 65px;
@@ -497,17 +502,48 @@ article {
   border: 1px solid #d7d7d7;
   border-radius: 5px;
   background-color: #f3f3f3;
-  padding: 10px; }
+  padding: 10px;
+  min-width: 175px; }
+
+fieldset {
+  border: none; }
+
+form {
+  width: 90%;
+  margin: auto; }
+  @media only screen and (min-width: 768px) {
+    form {
+      width: 49%; } }
+
+button {
+  width: 100%;
+  margin: 10px auto;
+  height: 30px;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+  background-color: #4d4c72;
+  color: white; }
+
+input {
+  width: 100%;
+  height: 30px;
+  display: block;
+  margin: 10px auto;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px; }
+
+.flex aside, form {
+  border-bottom: 1px solid #d7d7d7; }
 
 /**************************/
 /*         Charts         */
 /**************************/
-.lineGraph__container {
+.lineGraph__container, .barGraph__container, .doughnutGraph__container {
   width: 99%; }
 
 @media only screen and (min-width: 768px) {
   .barGraph__container, .doughnutGraph__container {
-    width: 45%; } }
+    width: 49%; } }
 
 /**************************/
 /*       TYPOGRAPHY       */
@@ -530,7 +566,7 @@ h4 span {
 
 header {
   color: white; }
-  header li, header h1 {
+  header li h1 {
     font-size: 1.5rem;
     display: inline-block; }
   header h1 {
@@ -543,7 +579,8 @@ header {
 /*         FORMS          */
 /**************************/
 .socStats {
-  position: relative; }
+  position: relative;
+  padding-bottom: 30px; }
   .socStats svg {
     width: 80%; }
 
@@ -555,45 +592,21 @@ header {
   margin-top: 5px;
   background-color: #7477bf; }
 
-fieldset {
-  border: none; }
-
-form {
-  width: 90%;
-  margin: auto; }
-  @media only screen and (min-width: 768px) {
-    form {
-      width: 45%; } }
-
-button {
-  width: 100%;
-  margin: 10px auto;
-  height: 30px;
-  border: 1px solid #d7d7d7;
-  border-radius: 5px;
-  background-color: #4d4c72;
-  color: white; }
-
-input {
-  width: 100%;
-  height: 30px;
-  display: block;
-  margin: 10px auto;
-  border: 1px solid #d7d7d7;
-  border-radius: 5px; }
-
 .user__form h4 {
-  text-align: center;
-  margin: 15px 5px; }
-.user__form .flex div {
-  display: block;
-  width: 100%; }
+  text-align: left;
+  margin: 15px 0px;
+  width: 52%; }
+  @media only screen and (min-width: 768px) {
+    .user__form h4 {
+      margin: 25px 0px; } }
 .user__form textarea, .user__form input, .user__form select {
   width: 100%;
   padding: 0px;
   margin: 10px auto;
   border: 1px solid #d7d7d7;
   border-radius: 5px; }
+.user__form select {
+  margin-top: 55px; }
 @media only screen and (min-width: 768px) {
   .user__form #save {
     width: 45%;
@@ -609,13 +622,44 @@ header {
   flex-basis: 100vw;
   background-color: #7477bf;
   padding: 10px 0px; }
-  header ul {
+  header > ul {
     display: flex;
     justify-content: space-around; }
-  header li:first-of-type {
-    flex-grow: 2; }
-  header li:last-of-type {
-    border-left: 1px solid #d7d7d7; }
+    header > ul ul {
+      display: none;
+      position: absolute;
+      z-index: 100;
+      top: 70px;
+      right: 73px;
+      margin: 0px;
+      background-color: #4d4c72;
+      border: 2px solid #4d4c72;
+      border-radius: 5px; }
+      @media only screen and (min-width: 768px) {
+        header > ul ul {
+          right: 270px; } }
+    header > ul ul::after {
+      position: absolute;
+      top: -10px;
+      right: 12px;
+      width: 0;
+      height: 0;
+      border-bottom: 10px solid #4d4c72;
+      border-left: 13px solid transparent;
+      border-right: 13px solid transparent;
+      content: ""; }
+    header > ul li:first-of-type {
+      flex-grow: 2; }
+    header > ul > li:last-of-type {
+      border-left: 1px solid #d7d7d7; }
+  header #notes li {
+    display: block;
+    padding: 5px;
+    margin: 0px;
+    border-radius: 5px;
+    border: 2px solid #4d4c72; }
+  header #notes li:hover {
+    background-color: limegreen; }
   header img {
     float: left;
     width: 50px;
@@ -627,6 +671,8 @@ header {
     header a p {
       float: right;
       margin: 20px;
+      width: 157px;
+      font-size: 1.5rem;
       display: none; }
       @media only screen and (min-width: 768px) {
         header a p {
@@ -637,10 +683,14 @@ header {
       header h4 {
         display: inline; } }
 
+.show {
+  display: block; }
+
 #alertNote {
   width: 11px;
   height: 5px;
   background-color: lime;
+  border: 1px solid #d7d7d7;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   position: absolute;
@@ -653,6 +703,12 @@ header {
 #lineChart__nav {
   float: right;
   margin: 14px; }
+  #lineChart__nav .currentChart {
+    background-color: limegreen;
+    color: white;
+    padding: 2px;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px; }
 
 li {
   list-style: none;
@@ -698,18 +754,17 @@ li {
 /*         IMAGES         */
 /**************************/
 .userInfo {
-  width: 100%;
-  border-bottom: 1px solid #d7d7d7; }
+  width: 100%; }
   @media only screen and (min-width: 768px) {
     .userInfo {
-      width: 45%; } }
+      width: 49%; } }
   .userInfo li {
     border-bottom: 1px solid #d7d7d7;
-    display: flex;
-    flex: 0 1 45%;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 15px 0px; }
+    padding: 15px 0px;
+    width: 95%; }
+    .userInfo li p {
+      float: right;
+      margin-top: 40px; }
   .userInfo li:last-of-type {
     border-bottom: none; }
 
@@ -721,7 +776,7 @@ li {
   border-radius: 10px;
   padding: 10px;
   position: relative; }
-  .noteBanner span {
+  .noteBanner a {
     position: absolute;
     color: #c9c9c9;
     font-size: 2rem;
