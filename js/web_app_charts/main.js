@@ -101,25 +101,24 @@ let doughutConfig = {
   let doughnutCtx = document.getElementById('doughnut').getContext('2d');
   const myDoughnut = new Chart(doughnutCtx, doughutConfig);
   let lineNav = document.querySelectorAll('#lineChart__nav li');
-  let lastChart ='';
 
   function updateChart(){
     for (var i = 0; i < lineNav.length; i++) {
 
 
       lineNav[i].addEventListener('click', function(event) {
-        
+
         const lineNavi = this.innerHTML;
         let newLabels;
         let newData;
 
-        if (lastChart == lineNavi) {
+        /*if (lineNavi == lastChart) {
           return;
-        }
+        }*/
 
         console.log(lastChart);
         console.log(lineNavi);
-        lastChart.classList.remove('currentChart');
+        document.querySelectorAll('.currentChart').classList.remove('currentChart');
         this.classList.add('currentChart');
 
 
@@ -151,6 +150,7 @@ let doughutConfig = {
     drawChart(chartTraf['mthlylabels'], chartTraf['mthlydata']);
     document.querySelector('#lineChart__nav > li').classList.add('currentChart');
 
+    let lastChart ='';
   function drawChart(chartLabels, chartData) {
     const lineChart = new Chart(lineCtx, {
       type: 'line',

@@ -3,8 +3,7 @@
 /**************************/
 header{
   flex-basis: 100vw;
-  background-color: orange;
-  color: black;
+  background-color: #7477bf;
   padding: 10px 0px;
   > ul{
     @include display(flex, null, null, space-around);
