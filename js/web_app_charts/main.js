@@ -118,7 +118,7 @@ let doughutConfig = {
 
         console.log(lastChart);
         console.log(lineNavi);
-        document.querySelectorAll('.currentChart').classList.remove('currentChart');
+        document.querySelector('.currentChart').classList.remove('currentChart');
         this.classList.add('currentChart');
 
 
