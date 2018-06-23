@@ -358,7 +358,7 @@ const setDataFromLocalStorage = function() {
   }
 
   if (tmznSettings !== null) {
-    timezone.val = tmznSettings;
+    timezone.value = tmznSettings;
 
   }
 }
@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("save").addEventListener("click", function() {
     localStorage.setItem('email_notes', emailNotes.checked);
     localStorage.setItem('prof_visibilty', prof_visibilty.checked);
-    localStorage.setItem('timezone', timezone.selectedIndex);
+    localStorage.setItem('timezone', timezone.value);
     alert('Settings successfully saved!');
   });
 
