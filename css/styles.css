@@ -26,6 +26,12 @@
       border: 1px solid #d7d7d7;
       background-color: #f8f8f8; } }
 
+.autocomplete-items {
+  border: 1px solid #d7d7d7; }
+
+.autocomplete-active {
+  background-color: limegreen; }
+
 .toggle {
   position: relative;
   display: inline-block;
@@ -611,7 +617,7 @@ header {
   .user__form #save {
     width: 45%;
     float: left; }
-  .user__form #clear {
+  .user__form #cancel {
     width: 45%;
     float: right; } }
 
@@ -698,7 +704,7 @@ header {
   right: 94px; }
   @media only screen and (min-width: 768px) {
     #alertNote {
-      right: 291px; } }
+      right: 290px; } }
 
 #lineChart__nav {
   float: right;

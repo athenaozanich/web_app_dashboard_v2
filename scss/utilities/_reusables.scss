@@ -20,6 +20,12 @@
   }
 }
 
+.autocomplete-items{
+  border: 1px solid #d7d7d7;
+}
+.autocomplete-active{
+  background-color: limegreen;
+}
 .toggle {
   position: relative;
   display: inline-block;

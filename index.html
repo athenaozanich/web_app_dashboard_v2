@@ -237,12 +237,15 @@
       </section>
 
       <section class="flex">
-        <form class="user__form" action="index.html" method="post">
+        <form class="user__form" action="index.html" method="post" onsubmit="return signup()">
           <fieldset>
             <legend>Message User</legend>
-            <input type="text" name="search" value="" placeholder="Search for user">
-            <textarea name="name" rows="8"></textarea>
-            <button type="button" name="send">Send Message</button>
+            <div id="user_search-container">
+              <input id="search-user" type="text" name="search" placeholder="Search for user">
+            </div>
+
+            <textarea id="userMsg" name="name" rows="8"></textarea>
+            <button type="submit" name="send" >Send Message</button>
           </fieldset>
         </form>
 
@@ -261,16 +264,365 @@
                   <span class="slider"></span>
                 </label>
             </div>
-            <select class="" name="">
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+            <select id="timezone" name="user_timezone" ><option value="select-timezone">Select Timezone</option>
+              <option value="america/adak">(GMT -09:00) America/Adak</option>
+
+              <option value="america/anchorage">(GMT -08:00) America/Anchorage</option>
+
+              <option value="america/anguilla">(GMT -04:00) America/Anguilla</option>
+
+              <option value="america/antigua">(GMT -04:00) America/Antigua</option>
+
+              <option value="america/araguaina">(GMT -03:00) America/Araguaina</option>
+
+              <option value="america/argentina/buenos_aires">(GMT -03:00) America/Argentina/Buenos_Aires</option>
+
+              <option value="america/argentina/catamarca">(GMT -03:00) America/Argentina/Catamarca</option>
+
+              <option value="america/argentina/comodrivadavia">(GMT -03:00) America/Argentina/ComodRivadavia</option>
+
+              <option value="america/argentina/cordoba">(GMT -03:00) America/Argentina/Cordoba</option>
+
+              <option value="america/argentina/jujuy">(GMT -03:00) America/Argentina/Jujuy</option>
+
+              <option value="america/argentina/la_rioja">(GMT -03:00) America/Argentina/La_Rioja</option>
+
+              <option value="america/argentina/mendoza">(GMT -03:00) America/Argentina/Mendoza</option>
+
+              <option value="america/argentina/rio_gallegos">(GMT -03:00) America/Argentina/Rio_Gallegos</option>
+
+              <option value="america/argentina/salta">(GMT -03:00) America/Argentina/Salta</option>
+
+              <option value="america/argentina/san_juan">(GMT -03:00) America/Argentina/San_Juan</option>
+
+              <option value="america/argentina/san_luis">(GMT -03:00) America/Argentina/San_Luis</option>
+
+              <option value="america/argentina/tucuman">(GMT -03:00) America/Argentina/Tucuman</option>
+
+              <option value="america/argentina/ushuaia">(GMT -03:00) America/Argentina/Ushuaia</option>
+
+              <option value="america/aruba">(GMT -04:00) America/Aruba</option>
+
+              <option value="america/asuncion">(GMT -04:00) America/Asuncion</option>
+
+              <option value="america/atikokan">(GMT -05:00) America/Atikokan</option>
+
+              <option value="america/atka">(GMT -09:00) America/Atka</option>
+
+              <option value="america/bahia">(GMT -03:00) America/Bahia</option>
+
+              <option value="america/bahia_banderas">(GMT -05:00) America/Bahia_Banderas</option>
+
+              <option value="america/barbados">(GMT -04:00) America/Barbados</option>
+
+              <option value="america/belem">(GMT -03:00) America/Belem</option>
+
+              <option value="america/belize">(GMT -06:00) America/Belize</option>
+
+              <option value="america/blanc-sablon">(GMT -04:00) America/Blanc-Sablon</option>
+
+              <option value="america/boa_vista">(GMT -04:00) America/Boa_Vista</option>
+
+              <option value="america/bogota">(GMT -05:00) America/Bogota</option>
+
+              <option value="america/boise">(GMT -06:00) America/Boise</option>
+
+              <option value="america/buenos_aires">(GMT -03:00) America/Buenos_Aires</option>
+
+              <option value="america/cambridge_bay">(GMT -06:00) America/Cambridge_Bay</option>
+
+              <option value="america/campo_grande">(GMT -04:00) America/Campo_Grande</option>
+
+              <option value="america/cancun">(GMT -05:00) America/Cancun</option>
+
+              <option value="america/caracas">(GMT -04:00) America/Caracas</option>
+
+              <option value="america/catamarca">(GMT -03:00) America/Catamarca</option>
+
+              <option value="america/cayenne">(GMT -03:00) America/Cayenne</option>
+
+              <option value="america/cayman">(GMT -05:00) America/Cayman</option>
+
+              <option value="america/chicago">(GMT -05:00) America/Chicago</option>
+
+              <option value="america/chihuahua">(GMT -06:00) America/Chihuahua</option>
+
+              <option value="america/coral_harbour">(GMT -05:00) America/Coral_Harbour</option>
+
+              <option value="america/cordoba">(GMT -03:00) America/Cordoba</option>
+
+              <option value="america/costa_rica">(GMT -06:00) America/Costa_Rica</option>
+
+              <option value="america/creston">(GMT -07:00) America/Creston</option>
+
+              <option value="america/cuiaba">(GMT -04:00) America/Cuiaba</option>
+
+              <option value="america/curacao">(GMT -04:00) America/Curacao</option>
+
+              <option value="america/danmarkshavn">(GMT +00:00) America/Danmarkshavn</option>
+
+              <option value="america/dawson">(GMT -07:00) America/Dawson</option>
+
+              <option value="america/dawson_creek">(GMT -07:00) America/Dawson_Creek</option>
+
+              <option value="america/denver">(GMT -06:00) America/Denver</option>
+
+              <option value="america/detroit">(GMT -04:00) America/Detroit</option>
+
+              <option value="america/dominica">(GMT -04:00) America/Dominica</option>
+
+              <option value="america/edmonton">(GMT -06:00) America/Edmonton</option>
+
+              <option value="america/eirunepe">(GMT -05:00) America/Eirunepe</option>
+
+              <option value="america/el_salvador">(GMT -06:00) America/El_Salvador</option>
+
+              <option value="america/ensenada">(GMT -07:00) America/Ensenada</option>
+
+              <option value="america/fort_nelson">(GMT -07:00) America/Fort_Nelson</option>
+
+              <option value="america/fort_wayne">(GMT -04:00) America/Fort_Wayne</option>
+
+              <option value="america/fortaleza">(GMT -03:00) America/Fortaleza</option>
+
+              <option value="america/glace_bay">(GMT -03:00) America/Glace_Bay</option>
+
+              <option value="america/godthab">(GMT -02:00) America/Godthab</option>
+
+              <option value="america/goose_bay">(GMT -03:00) America/Goose_Bay</option>
+
+              <option value="america/grand_turk">(GMT -04:00) America/Grand_Turk</option>
+
+              <option value="america/grenada">(GMT -04:00) America/Grenada</option>
+
+              <option value="america/guadeloupe">(GMT -04:00) America/Guadeloupe</option>
+
+              <option value="america/guatemala">(GMT -06:00) America/Guatemala</option>
+
+              <option value="america/guayaquil">(GMT -05:00) America/Guayaquil</option>
+
+              <option value="america/guyana">(GMT -04:00) America/Guyana</option>
+
+              <option value="america/halifax">(GMT -03:00) America/Halifax</option>
+
+              <option value="america/havana">(GMT -04:00) America/Havana</option>
+
+              <option value="america/hermosillo">(GMT -07:00) America/Hermosillo</option>
+
+              <option value="america/indiana/indianapolis">(GMT -04:00) America/Indiana/Indianapolis</option>
+
+              <option value="america/indiana/knox">(GMT -05:00) America/Indiana/Knox</option>
+
+              <option value="america/indiana/marengo">(GMT -04:00) America/Indiana/Marengo</option>
+
+              <option value="america/indiana/petersburg">(GMT -04:00) America/Indiana/Petersburg</option>
+
+              <option value="america/indiana/tell_city">(GMT -05:00) America/Indiana/Tell_City</option>
+
+              <option value="america/indiana/vevay">(GMT -04:00) America/Indiana/Vevay</option>
+
+              <option value="america/indiana/vincennes">(GMT -04:00) America/Indiana/Vincennes</option>
+
+              <option value="america/indiana/winamac">(GMT -04:00) America/Indiana/Winamac</option>
+
+              <option value="america/indianapolis">(GMT -04:00) America/Indianapolis</option>
+
+              <option value="america/inuvik">(GMT -06:00) America/Inuvik</option>
+
+              <option value="america/iqaluit">(GMT -04:00) America/Iqaluit</option>
+
+              <option value="america/jamaica">(GMT -05:00) America/Jamaica</option>
+
+              <option value="america/jujuy">(GMT -03:00) America/Jujuy</option>
+
+              <option value="america/juneau">(GMT -08:00) America/Juneau</option>
+
+              <option value="america/kentucky/louisville">(GMT -04:00) America/Kentucky/Louisville</option>
+
+              <option value="america/kentucky/monticello">(GMT -04:00) America/Kentucky/Monticello</option>
+
+              <option value="america/knox_in">(GMT -05:00) America/Knox_IN</option>
+
+              <option value="america/kralendijk">(GMT -04:00) America/Kralendijk</option>
+
+              <option value="america/la_paz">(GMT -04:00) America/La_Paz</option>
+
+              <option value="america/lima">(GMT -05:00) America/Lima</option>
+
+              <option value="america/los_angeles">(GMT -07:00) America/Los_Angeles</option>
+
+              <option value="america/louisville">(GMT -04:00) America/Louisville</option>
+
+              <option value="america/lower_princes">(GMT -04:00) America/Lower_Princes</option>
+
+              <option value="america/maceio">(GMT -03:00) America/Maceio</option>
+
+              <option value="america/managua">(GMT -06:00) America/Managua</option>
+
+              <option value="america/manaus">(GMT -04:00) America/Manaus</option>
+
+              <option value="america/marigot">(GMT -04:00) America/Marigot</option>
+
+              <option value="america/martinique">(GMT -04:00) America/Martinique</option>
+
+              <option value="america/matamoros">(GMT -05:00) America/Matamoros</option>
+
+              <option value="america/mazatlan">(GMT -06:00) America/Mazatlan</option>
+
+              <option value="america/mendoza">(GMT -03:00) America/Mendoza</option>
+
+              <option value="america/menominee">(GMT -05:00) America/Menominee</option>
+
+              <option value="america/merida">(GMT -05:00) America/Merida</option>
+
+              <option value="america/metlakatla">(GMT -08:00) America/Metlakatla</option>
+
+              <option value="america/mexico_city">(GMT -05:00) America/Mexico_City</option>
+
+              <option value="america/miquelon">(GMT -02:00) America/Miquelon</option>
+
+              <option value="america/moncton">(GMT -03:00) America/Moncton</option>
+
+              <option value="america/monterrey">(GMT -05:00) America/Monterrey</option>
+
+              <option value="america/montevideo">(GMT -03:00) America/Montevideo</option>
+
+              <option value="america/montreal">(GMT -04:00) America/Montreal</option>
+
+              <option value="america/montserrat">(GMT -04:00) America/Montserrat</option>
+
+              <option value="america/nassau">(GMT -04:00) America/Nassau</option>
+
+              <option value="america/new_york">(GMT -04:00) America/New_York</option>
+
+              <option value="america/nipigon">(GMT -04:00) America/Nipigon</option>
+
+              <option value="america/nome">(GMT -08:00) America/Nome</option>
+
+              <option value="america/noronha">(GMT -02:00) America/Noronha</option>
+
+              <option value="america/north_dakota/beulah">(GMT -05:00) America/North_Dakota/Beulah</option>
+
+              <option value="america/north_dakota/center">(GMT -05:00) America/North_Dakota/Center</option>
+
+              <option value="america/north_dakota/new_salem">(GMT -05:00) America/North_Dakota/New_Salem</option>
+
+              <option value="america/ojinaga">(GMT -06:00) America/Ojinaga</option>
+
+              <option value="america/panama">(GMT -05:00) America/Panama</option>
+
+              <option value="america/pangnirtung">(GMT -04:00) America/Pangnirtung</option>
+
+              <option value="america/paramaribo">(GMT -03:00) America/Paramaribo</option>
+
+              <option value="america/phoenix">(GMT -07:00) America/Phoenix</option>
+
+              <option value="america/port-au-prince">(GMT -04:00) America/Port-au-Prince</option>
+
+              <option value="america/port_of_spain">(GMT -04:00) America/Port_of_Spain</option>
+
+              <option value="america/porto_acre">(GMT -05:00) America/Porto_Acre</option>
+
+              <option value="america/porto_velho">(GMT -04:00) America/Porto_Velho</option>
+
+              <option value="america/puerto_rico">(GMT -04:00) America/Puerto_Rico</option>
+
+              <option value="america/punta_arenas">(GMT -03:00) America/Punta_Arenas</option>
+
+              <option value="america/rainy_river">(GMT -05:00) America/Rainy_River</option>
+
+              <option value="america/rankin_inlet">(GMT -05:00) America/Rankin_Inlet</option>
+
+              <option value="america/recife">(GMT -03:00) America/Recife</option>
+
+              <option value="america/regina">(GMT -06:00) America/Regina</option>
+
+              <option value="america/resolute">(GMT -05:00) America/Resolute</option>
+
+              <option value="america/rio_branco">(GMT -05:00) America/Rio_Branco</option>
+
+              <option value="america/rosario">(GMT -03:00) America/Rosario</option>
+
+              <option value="america/santa_isabel">(GMT -07:00) America/Santa_Isabel</option>
+
+              <option value="america/santarem">(GMT -03:00) America/Santarem</option>
+
+              <option value="america/santiago">(GMT -04:00) America/Santiago</option>
+
+              <option value="america/santo_domingo">(GMT -04:00) America/Santo_Domingo</option>
+
+              <option value="america/sao_paulo">(GMT -03:00) America/Sao_Paulo</option>
+
+              <option value="america/scoresbysund">(GMT +00:00) America/Scoresbysund</option>
+
+              <option value="america/shiprock">(GMT -06:00) America/Shiprock</option>
+
+              <option value="america/sitka">(GMT -08:00) America/Sitka</option>
+
+              <option value="america/st_barthelemy">(GMT -04:00) America/St_Barthelemy</option>
+
+              <option value="america/st_johns">(GMT -02:30) America/St_Johns</option>
+
+              <option value="america/st_kitts">(GMT -04:00) America/St_Kitts</option>
+
+              <option value="america/st_lucia">(GMT -04:00) America/St_Lucia</option>
+
+              <option value="america/st_thomas">(GMT -04:00) America/St_Thomas</option>
+
+              <option value="america/st_vincent">(GMT -04:00) America/St_Vincent</option>
+
+              <option value="america/swift_current">(GMT -06:00) America/Swift_Current</option>
+
+              <option value="america/tegucigalpa">(GMT -06:00) America/Tegucigalpa</option>
+
+              <option value="america/thule">(GMT -03:00) America/Thule</option>
+
+              <option value="america/thunder_bay">(GMT -04:00) America/Thunder_Bay</option>
+
+              <option value="america/tijuana">(GMT -07:00) America/Tijuana</option>
+
+              <option value="america/toronto">(GMT -04:00) America/Toronto</option>
+
+              <option value="america/tortola">(GMT -04:00) America/Tortola</option>
+
+              <option value="america/vancouver">(GMT -07:00) America/Vancouver</option>
+
+              <option value="america/virgin">(GMT -04:00) America/Virgin</option>
+
+              <option value="america/whitehorse">(GMT -07:00) America/Whitehorse</option>
+
+              <option value="america/winnipeg">(GMT -05:00) America/Winnipeg</option>
+
+              <option value="america/yakutat">(GMT -08:00) America/Yakutat</option>
+
+              <option value="america/yellowknife">(GMT -06:00) America/Yellowknife</option>
+
+              <option value="antarctica/casey">(GMT +08:00) Antarctica/Casey</option>
+
+              <option value="antarctica/davis">(GMT +07:00) Antarctica/Davis</option>
+
+              <option value="antarctica/dumontdurville">(GMT +10:00) Antarctica/DumontDUrville</option>
+
+              <option value="antarctica/macquarie">(GMT +11:00) Antarctica/Macquarie</option>
+
+              <option value="antarctica/mawson">(GMT +05:00) Antarctica/Mawson</option>
+
+              <option value="antarctica/mcmurdo">(GMT +12:00) Antarctica/McMurdo</option>
+
+              <option value="antarctica/palmer">(GMT -03:00) Antarctica/Palmer</option>
+
+              <option value="antarctica/rothera">(GMT -03:00) Antarctica/Rothera</option>
+
+              <option value="antarctica/south_pole">(GMT +12:00) Antarctica/South_Pole</option>
+
+              <option value="antarctica/syowa">(GMT +03:00) Antarctica/Syowa</option>
+
+              <option value="antarctica/troll">(GMT +02:00) Antarctica/Troll</option>
+
+              <option value="antarctica/vostok">(GMT +06:00) Antarctica/Vostok</option>
             </select>
             <button id="save" type="button" name="save">Save Settings</button>
-            <button id="clear"type="button" name="clear__data">Clear Settings</button>
+            <button id="cancel" type="button" name="cancel">Cancel Settings</button>
           </fieldset>
         </form>
       </section>
