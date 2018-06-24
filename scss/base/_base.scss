@@ -7,7 +7,7 @@ ul{
 }
 body{
 	@include display(flex, null, row wrap, space-around);
-	background-color:#252525;
+	background-color:#3e3e3e;
 }
 a{
 	color: white;

@@ -3,7 +3,7 @@
 /**************************/
 header{
   flex-basis: 100vw;
-  background-color: #7477bf;
+  background-color: #525252;
   padding: 10px 0px;
   > ul{
     @include display(flex, null, null, space-around);
@@ -100,17 +100,6 @@ header{
   }
 }
 
-#lineChart__nav{
-  float: right;
-  margin:14px;
-  .currentChart{
-    background-color: limegreen;
-    color: white;
-    padding:2px;
-    border: 1px solid #d7d7d7;
-    border-radius: 5px;
-  }
-}
 
 li{
   list-style: none;
@@ -121,7 +110,7 @@ li{
 
 .nav__main{
   @include display(flex, 1, row wrap, space-around);
-  background-color:rgb(77,76,114);
+  background-color:#2d2d2d;
   a{
     height: 40px;
     margin-top: 10px;

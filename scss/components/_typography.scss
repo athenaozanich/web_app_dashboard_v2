@@ -2,10 +2,15 @@
 /*       TYPOGRAPHY       */
 /**************************/
 @import url('https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative');
+*{
+  color:#a97548;
+  font-family: 'Cinzel', sarif;
+}
 h1,h2,h3,h4{
   font-family: 'Cinzel Decorative', cursive;
-  color: white;
+  color: gold;
 }
+
 h2{
   width:20%;
   height:50px;
@@ -20,19 +25,15 @@ h3{
   font-size: .9rem;
 }
 
-h4{
-  span{
-    color:rgb(116,119,191);
-  }
-}
-
 header{
-  color:white;
   li h1{
     font-size:1.5rem;
     display:inline-block;
   }
-  h1{
-    font-weight: bold;
-  }
+}
+
+span{
+  font-size: 10px;
+  font-style: italic;
+  color:#a97548;
 }
