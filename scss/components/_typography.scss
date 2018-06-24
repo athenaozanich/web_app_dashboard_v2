@@ -1,24 +1,31 @@
 /**************************/
 /*       TYPOGRAPHY       */
 /**************************/
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative');
+h1,h2,h3,h4{
+  font-family: 'Cinzel Decorative', cursive;
+  color: white;
+}
 h2{
   width:20%;
   height:50px;
   text-align: center;
   display: inline-block;
-  background-color: white;
   margin:0px;
   padding-top: 20px;
 }
+
 h3{
   margin: 15px;
   font-size: .9rem;
 }
+
 h4{
   span{
     color:rgb(116,119,191);
   }
 }
+
 header{
   color:white;
   li h1{

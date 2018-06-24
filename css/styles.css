@@ -7,6 +7,7 @@
 /**************************/
 /*        Reusables       */
 /**************************/
+@import url("https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative");
 .flex {
   display: flex;
   flex: 1;
@@ -475,7 +476,8 @@ ul {
 body {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  background-color: #252525; }
 
 a {
   color: white;
@@ -483,8 +485,7 @@ a {
 
 main {
   width: 95%;
-  margin: auto;
-  background-color: white; }
+  margin: auto; }
   @media only screen and (min-width: 768px) {
     main {
       width: 90%; } }
@@ -554,12 +555,15 @@ input {
 /**************************/
 /*       TYPOGRAPHY       */
 /**************************/
+h1, h2, h3, h4 {
+  font-family: 'Cinzel Decorative', cursive;
+  color: white; }
+
 h2 {
   width: 20%;
   height: 50px;
   text-align: center;
   display: inline-block;
-  background-color: white;
   margin: 0px;
   padding-top: 20px; }
 
@@ -674,14 +678,14 @@ header {
   header a {
     color: white;
     text-decoration: none; }
-    header a p {
+    header a h3 {
       float: right;
       margin: 20px;
-      width: 157px;
-      font-size: 1.5rem;
+      width: 100px;
+      font-size: 1rem;
       display: none; }
       @media only screen and (min-width: 768px) {
-        header a p {
+        header a h3 {
           display: block; } }
   header h4 {
     display: none; }
@@ -704,7 +708,7 @@ header {
   right: 94px; }
   @media only screen and (min-width: 768px) {
     #alertNote {
-      right: 290px; } }
+      right: 233px; } }
 
 #lineChart__nav {
   float: right;
