@@ -472,14 +472,15 @@ input {
 .flex aside, form {
   border-bottom: 1px solid #009200; }
 
-textarea, input, select {
+textarea, input, select, option {
   padding: 0px;
   margin: 10px auto;
   border: 1px solid #009200;
   border-radius: 5px;
   width: 100%;
-  background-color: #6d6d6d; }
-  textarea::placeholder, input::placeholder, select::placeholder {
+  background-color: #6d6d6d;
+  color: black; }
+  textarea::placeholder, input::placeholder, select::placeholder, option::placeholder {
     color: black; }
 
 /**************************/

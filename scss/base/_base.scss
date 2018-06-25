@@ -32,7 +32,7 @@ main{
 			}
 		}
 	}
- 
+
 }
 
 img{
@@ -87,13 +87,14 @@ input{
  .flex aside, form{
   border-bottom: 1px solid $green;
 }
-textarea, input, select{
+textarea, input, select, option{
 	padding:0px;
 	margin: 10px auto;
 	border: 1px solid $green;
 	border-radius: 5px;
 	width:100%;
 	background-color: #6d6d6d;
+	color:black;
 	&::placeholder{
 		color:black;
 	}
