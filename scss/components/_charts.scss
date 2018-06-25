@@ -21,10 +21,10 @@
   float: right;
   margin:14px;
   .currentChart{
-    background-color: limegreen;
+    background-color: $emperor;
     color: white;
     padding:2px;
-    border: 1px solid #d7d7d7;
+    border: 1px solid $green;
     border-radius: 5px;
   }
 }

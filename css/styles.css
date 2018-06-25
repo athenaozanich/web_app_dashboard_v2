@@ -429,7 +429,8 @@ img {
   height: 65px;
   border: 3px #A97548;
   border-style: groove ridge ridge groove;
-  border-radius: 50%; }
+  border-radius: 50%;
+  box-shadow: 2px 2px 1px black; }
 
 article {
   display: flex;
@@ -441,7 +442,8 @@ article {
   border-radius: 5px;
   background-color: #2d2d2d;
   padding: 10px;
-  min-width: 175px; }
+  min-width: 175px;
+  box-shadow: 6px 6px 3px black; }
 
 fieldset {
   border: none; }
@@ -460,6 +462,7 @@ button {
   border: 1px solid #009200;
   border-radius: 5px;
   background-color: #525252;
+  box-shadow: 6px 6px 3px black;
   color: white; }
   button:hover {
     background-color: #009200; }
@@ -479,9 +482,12 @@ textarea, input, select, option {
   border-radius: 5px;
   width: 100%;
   background-color: #6d6d6d;
+  box-shadow: 6px 6px 3px black;
   color: black; }
   textarea::placeholder, input::placeholder, select::placeholder, option::placeholder {
     color: black; }
+  textarea:focus, textarea :active, input:focus, input :active, select:focus, select :active, option:focus, option :active {
+    border: 1px solid #009200; }
 
 /**************************/
 /*        Reusables       */
@@ -502,6 +508,22 @@ textarea, input, select, option {
       right: 0px;
       top: 96px;
       background-color: #2d2d2d; } }
+
+.noteBanner {
+  width: 90%;
+  background-color: #525252;
+  border: 1px solid #009200;
+  margin: 30px auto;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  box-shadow: 6px 6px 3px black; }
+  .noteBanner a {
+    position: absolute;
+    color: black;
+    font-size: 2rem;
+    top: 0px;
+    right: 10px; }
 
 .autocomplete-items {
   border: 1px solid #d7d7d7; }
@@ -566,10 +588,10 @@ input:checked + .slider::before {
   float: right;
   margin: 14px; }
   #lineChart__nav .currentChart {
-    background-color: limegreen;
+    background-color: #525252;
     color: white;
     padding: 2px;
-    border: 1px solid #d7d7d7;
+    border: 1px solid #009200;
     border-radius: 5px; }
 
 /**************************/
@@ -579,11 +601,12 @@ input:checked + .slider::before {
   color: #a97548;
   font-family: 'Cinzel', sarif;
   font-weight: bolder;
-  transition: 1s; }
+  transition: .5s; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, legend {
   font-family: 'Cinzel Decorative', cursive;
-  color: gold; }
+  color: gold;
+  text-shadow: 4px 4px 2px black; }
 
 h2 {
   width: 20%;
@@ -669,7 +692,7 @@ header {
     header > ul li:first-of-type {
       flex-grow: 2; }
     header > ul > li:last-of-type {
-      border-left: 1px solid black; }
+      border-left: 1px solid #A97548; }
   header #notes li {
     display: block;
     padding: 5px;
@@ -775,20 +798,5 @@ li {
       margin-top: 40px; }
   .userInfo li:last-of-type {
     border-bottom: none; }
-
-.noteBanner {
-  width: 90%;
-  background-color: #525252;
-  border: 1px solid #009200;
-  margin: 30px auto;
-  border-radius: 10px;
-  padding: 10px;
-  position: relative; }
-  .noteBanner a {
-    position: absolute;
-    color: black;
-    font-size: 2rem;
-    top: 0px;
-    right: 10px; }
 
 /*# sourceMappingURL=styles.css.map */

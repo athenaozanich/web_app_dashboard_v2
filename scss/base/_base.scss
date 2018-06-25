@@ -41,6 +41,7 @@ img{
 	border: 3px $cape-alliser;
 	border-style: groove ridge ridge groove;
   border-radius: 50%;
+	box-shadow: 2px 2px 1px black;
 }
 
 article{
@@ -51,6 +52,7 @@ article{
 	background-color: $mine-shaft;
 	padding:10px;
 	min-width: 175px;
+	box-shadow: 6px 6px 3px black;
 }
 
 fieldset{
@@ -72,6 +74,7 @@ button{
   border: 1px solid $green;
   border-radius: 5px;
   background-color:$emperor;
+	  box-shadow: 6px 6px 3px black;
   color: white;
 	&:hover{
 		background-color: $green;
@@ -94,8 +97,12 @@ textarea, input, select, option{
 	border-radius: 5px;
 	width:100%;
 	background-color: #6d6d6d;
+	box-shadow: 6px 6px 3px black;
 	color:black;
 	&::placeholder{
 		color:black;
+	}
+	&:focus, :active{
+		border: 1px solid $green;
 	}
 }

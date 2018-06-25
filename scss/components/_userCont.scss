@@ -19,20 +19,3 @@
     border-bottom: none;
   }
 }
-
-.noteBanner{
-  width: 90%;
-  background-color: $emperor;
-  border: 1px solid $green;
-  margin: 30px auto;
-  border-radius: 10px;
-  padding: 10px;
-  position: relative;
-  a{
-    position:absolute;
-    color:black;
-    font-size: 2rem;
-    top:0px;
-    right:10px;
-  }
-}
