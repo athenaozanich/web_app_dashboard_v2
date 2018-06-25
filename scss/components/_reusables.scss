@@ -7,16 +7,13 @@
 
 .searchbox{
   width:100%;
-  input{
-    width:90%;
-  }
+  padding: 20px;
   @include brk-pt{
     width: 70%;
     position: absolute;
     right: 0px;
-    top: 90px;
-    border: 1px solid #d7d7d7;
-    background-color: #f8f8f8;
+    top: 96px;
+    background-color: #2d2d2d;
   }
 }
 
@@ -24,7 +21,7 @@
   border: 1px solid #d7d7d7;
 }
 .autocomplete-active{
-  background-color: limegreen;
+  background-color: $green;
 }
 .toggle {
   position: relative;
@@ -45,7 +42,7 @@
   left: 0;
   right: 0;
   bottom: -10px;
-  background-color: #ccc;
+  background-color: #6d6d6d;
   border-radius: 34px;
   -webkit-transition: .4s;
   transition: .4s;
@@ -70,7 +67,7 @@ input:focus + .slider {
 }
 
 input:checked + .slider {
-  background-color: rgb(116,119,191);
+  background-color: $green;
 }
 
 input:checked + .slider::before {

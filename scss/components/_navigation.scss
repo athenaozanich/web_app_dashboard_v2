@@ -3,7 +3,7 @@
 /**************************/
 header{
   flex-basis: 100vw;
-  background-color: #525252;
+  background-color: $emperor;
   padding: 10px 0px;
   > ul{
     @include display(flex, null, null, space-around);
@@ -14,8 +14,9 @@ header{
       top:70px;
       right:73px;
       margin: 0px;
-      background-color:rgb(77,76,114);
-      border: 2px solid rgb(77,76,114);
+      padding: 2px;
+      background-color:$ms-dark;
+      border: 2px solid black;
       border-radius: 5px;
       @include brk-pt{
         right:270px;
@@ -27,7 +28,7 @@ header{
       right: 12px;
       width: 0;
       height: 0;
-      border-bottom: 10px solid #4d4c72;
+      border-bottom: 10px solid black;
       border-left: 13px solid transparent;
       border-right: 13px solid transparent;
       content: "";
@@ -36,7 +37,7 @@ header{
       flex-grow:2;
     }
     > li:last-of-type{
-      border-left:1px solid #d7d7d7;
+      border-left:1px solid black;
     }
   }
   #notes{
@@ -45,11 +46,11 @@ header{
     padding: 5px;
     margin: 0px;
     border-radius: 5px;
-    border: 2px solid #4d4c72;
+    border: 2px solid $ms-dark;
 
     }
     & li:hover{
-      background-color: limegreen;
+      background-color: $emperor;
     }
 
   }
@@ -89,14 +90,14 @@ header{
   width: 11px;
   height: 5px;
   background-color: lime;
-  border:1px solid #d7d7d7;
+  border:1px solid $emperor;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   position: absolute;
-  top: 24px;
+  top: 25px;
   right: 94px;
   @include brk-pt{
-    right: 233px;
+    right: 239px;
   }
 }
 
@@ -134,12 +135,12 @@ li{
 }
 
 #current{
-  border-bottom: 2px solid lightgreen;
+  border-bottom: 2px solid $green;
   svg path{
     fill:white;
   }
   @include brk-pt{
     border-bottom: none;
-    border-right: 2px solid lightgreen;
+    border-right: 2px solid $green;
   }
 }

@@ -25,9 +25,9 @@ let barConfig = {
     labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
     datasets: [{
       label: 'Dataset 1',
-      backgroundColor: "rgba(255,100,100,.0)",
-      borderColor: "rgba(255,200,200,.8)",
-      borderWidth: 1,
+      backgroundColor: "rgba(163,98,255, 1)",
+      borderColor: "#009200",
+      borderWidth:2,
       data: [200, 350, 150, 500, 557, 333, 682, 1250, 809, 999, 1520, 1323]
     }]
   },
@@ -43,6 +43,26 @@ let barConfig = {
     responsive: true,
     legend: {
       display: false
+    },
+    scales: {
+      xAxes: [{
+        display: true,
+        gridLines:{
+                color:"#A97548"
+        },
+        ticks:{
+            fontColor:"#A97548"
+        }
+      }],
+      yAxes: [{
+        display: true,
+        gridLines:{
+                color:"#A97548"
+        },
+        ticks:{
+            fontColor:"#A97548"
+        }
+      }]
     }
   }
 };
@@ -51,21 +71,22 @@ let doughutConfig = {
   data: {
     datasets: [{
       data: [
-        randomScalingFactor(),
-        randomScalingFactor(),
-        randomScalingFactor(),
+        100,
+        30,
+        5,
       ],
       backgroundColor: [
-        window.chartColors.blue,
-        window.chartColors.green,
-        window.chartColors.purple,
+        "rgba(163,98,255, 1)",
+        "#009200",
+        "#ffd700",
 
-      ]
+      ],
+        borderColor: "#A97548",
     }],
     labels: [
-      'Purple',
-      'Green',
-      'Blue'
+      'Mobile',
+      'Tablets',
+      'Destops'
     ]
   },
   options: {
@@ -90,6 +111,7 @@ let doughutConfig = {
       animateScale: true,
       animateRotate: true
     }
+
   }
 };
 
@@ -158,12 +180,12 @@ let doughutConfig = {
         labels: chartLabels,
         datasets: [{
           lineTension:0,
-          backgroundColor: "rgba(255,100,100,.0)",
-          borderColor: "rgba(255,200,200,.8)",
+          backgroundColor: "rgba(163,98,255, 1)",
+          borderColor: "#009200",
           borderWidth: 2,
           pointBorderWidth: 2,
           pointRadius: 5,
-          pointBackgroundColor: 'white',
+          pointBackgroundColor: 'rgba(163,98,255, 1)',
           data: chartData,
           fill: false,
         }]
@@ -177,6 +199,7 @@ let doughutConfig = {
                     bottom: 15
                 }
             },
+
         legend: {
             display: false
         },
@@ -190,10 +213,22 @@ let doughutConfig = {
         },
         scales: {
           xAxes: [{
-            display: true
+            display: true,
+            gridLines:{
+                    color:"#A97548"
+            },
+            ticks:{
+                fontColor:"#A97548"
+            }
           }],
           yAxes: [{
-            display: true
+            display: true,
+            gridLines:{
+                    color:"#A97548"
+            },
+            ticks:{
+                fontColor:"#A97548"
+            }
           }]
         }
       }

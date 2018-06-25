@@ -1,5 +1,5 @@
 /**************************/
-/*         IMAGES         */
+/*        UserInfo        */
 /**************************/
 .userInfo{
   width: 100%;
@@ -7,7 +7,7 @@
     width:49%;
   }
   li{
-    border-bottom: 1px solid #d7d7d7;
+    border-bottom: 1px solid $green;
     padding: 15px 0px;
     width: 95%;
     p{
@@ -22,15 +22,15 @@
 
 .noteBanner{
   width: 90%;
-  background-color: #525252;
-  color: white;
+  background-color: $emperor;
+  border: 1px solid $green;
   margin: 30px auto;
   border-radius: 10px;
   padding: 10px;
   position: relative;
   a{
     position:absolute;
-    color:#c9c9c9;
+    color:black;
     font-size: 2rem;
     top:0px;
     right:10px;

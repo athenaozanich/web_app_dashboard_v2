@@ -5,14 +5,17 @@ ul{
 		display: inline-block;
 	}
 }
+
 body{
 	@include display(flex, null, row wrap, space-around);
-	background-color:#3e3e3e;
+	background-color:$ms-dark;
 }
+
 a{
 	color: white;
 	text-decoration: none;
 }
+
 main{
 	width: 95%;
 	margin: auto;
@@ -20,28 +23,32 @@ main{
 	@include brk-pt{
     width:90%;
   }
+
 	> section:first-of-type{
-		border-bottom:1px solid #d7d7d7;
+		border-bottom:1px solid $green;
 		@include brk-pt{
 			& > aside:first-child, > form:first-child{
-				border-right:1px solid #d7d7d7;
+				border-right:1px solid $green;
 			}
 		}
 	}
+ 
 }
 
 img{
   width:65px;
   height:65px;
+	border: 3px $cape-alliser;
+	border-style: groove ridge ridge groove;
   border-radius: 50%;
 }
 
 article{
 	@include display(flex, 0 1 30%, row wrap, space-around);
 	margin-top: 15px;
-	border: 1px solid #d7d7d7;
+	border: 1px solid $green;
 	border-radius: 5px;
-	background-color: #f3f3f3;
+	background-color: $mine-shaft;
 	padding:10px;
 	min-width: 175px;
 }
@@ -62,20 +69,32 @@ button{
   width: 100%;
   margin: 10px auto;
   height:30px;
-  border: 1px solid #d7d7d7;
+  border: 1px solid $green;
   border-radius: 5px;
-  background-color:rgb(77,76,114);
+  background-color:$emperor;
   color: white;
+	&:hover{
+		background-color: $green;
+	}
 }
 
+
 input{
-  width: 100%;
   height:30px;
   display:block;
   margin: 10px auto;
-  border: 1px solid #d7d7d7;
-  border-radius: 5px;
 }
  .flex aside, form{
-  border-bottom: 1px solid #d7d7d7;
+  border-bottom: 1px solid $green;
+}
+textarea, input, select{
+	padding:0px;
+	margin: 10px auto;
+	border: 1px solid $green;
+	border-radius: 5px;
+	width:100%;
+	background-color: #6d6d6d;
+	&::placeholder{
+		color:black;
+	}
 }
