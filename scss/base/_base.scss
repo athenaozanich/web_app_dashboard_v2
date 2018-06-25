@@ -14,6 +14,7 @@ body{
 a{
 	color: white;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 main{
@@ -74,8 +75,9 @@ button{
   border: 1px solid $green;
   border-radius: 5px;
   background-color:$emperor;
-	  box-shadow: 6px 6px 3px black;
+	box-shadow: 6px 6px 3px black;
   color: white;
+	cursor: pointer;
 	&:hover{
 		background-color: $green;
 	}

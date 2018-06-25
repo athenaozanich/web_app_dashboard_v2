@@ -1,6 +1,8 @@
 .user__form{
-
-  h4{
+  legend{
+    padding: 15px;
+  }
+  p{
     text-align: left;
     margin:15px 0px;
     width:52%;
@@ -8,7 +10,7 @@
       margin:25px 0px;
     }
   }
-  
+
   select{
     margin-top: 55px;
   }
