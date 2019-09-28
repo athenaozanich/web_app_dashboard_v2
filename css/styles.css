@@ -601,7 +601,7 @@ input:checked + .slider::before {
 /*       TYPOGRAPHY       */
 /**************************/
 * {
-  color: #a97548;
+  color: #ffb675;
   font-family: 'Cinzel', sarif;
   font-weight: bolder;
   transition: .5s; }
@@ -630,7 +630,7 @@ header li h1 {
 span {
   font-size: 15px;
   font-style: italic;
-  color: #a362ff; }
+  color: #b580ff; }
 
 /**************************/
 /*        Soc Med         */
