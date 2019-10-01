@@ -5,9 +5,8 @@
 
 ## Languages
   1. HTML5
-  2. CSS3
-  3. SASS
-  4. Client side Javascript   
+  2. SASS
+  3. Client side Javascript   
 
 ## Technologies and Techniques
   1. Chrome Dev Tools
@@ -18,10 +17,6 @@
   6. Fluid width Responsive Design
   7. Charts.js plugin
   8. Local Storage
-  9. Form validation
-  10. Auto Complete Search messages
 
-## Techdegree Project Description
-Many websites do more than just give you information. Sites like GitHub, Zillow, Mint and Treehouse let users do things. They act like programs you run on your computer. These web applications, often include pages for looking at your profile, what you've done in the week or what you need to get done. These "dashboards" act like your control panel for controlling the web app.
-
-In this project, you'll take a mockup and a few icons and build a beautiful, web dashboard complete with JavaScript-driven charts and graphs. You only need to take the design and create the HTML, CSS and JavaScript functionality for this one page -- you don't need to create other pages, or build any backend or database functionality.
+## Description
+  A mobile friendly Web App Dashboard. Incorporated Chart.js for inclusion of graphs and developed custom widgets for displaying social media stats and recent user information. Implemented JavaScript form validation for messaging a user and local storage for saving preferences.
