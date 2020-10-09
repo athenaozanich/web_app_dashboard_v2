@@ -3,7 +3,7 @@
 /**************************/
 .userInfo{
   width: 100%;
-  @include brk-pt{
+  @media only screen and #{$brkpoint-md} {
     width:49%;
   }
   li{
